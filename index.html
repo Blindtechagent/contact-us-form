@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <form id="form" autocomplete="off">
+        <h1>Contact Us</h1>
+        <div class="form-grid">
+            <div class="field">
+                <label for="f_name">First Name *</label>
+                <input type="text" id="f_name" name="firstName" autofocus required>
+            </div>
+            <div class="field">
+                <label for="l_name">Last Name *</label>
+                <input type="text" id="l_name" name="lastName" required>
+            </div>
+            <div class="field full-width">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field full-width">
+                <span class="field-title" id="query-label">Query Type *</span>
+                <div class="query-options" role="group" aria-labelledby="query-label">
+                    <label class="radio-option" for="general">
+                        <input type="radio" id="general" name="type" value="general" required>
+                        <span>General Enquiry</span>
+                    </label>
+                    <label class="radio-option" for="support">
+                        <input type="radio" id="support" name="type" value="support">
+                        <span>Support Request</span>
+                    </label>
+                </div>
+            </div>
+            <div class="field full-width">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+        </div>
+        <label class="consent" for="consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span>I consent to being contacted by the team *</span>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
